@@ -1,0 +1,19 @@
+{
+  "name": "egghead-styles",
+  "version": "1.0.0",
+  "description": "Holds all of egghead.io's styles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggheadio/egghead-styles.git"
+  },
+  "author": "egghead.io",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/eggheadio/egghead-styles/issues"
+  },
+  "homepage": "https://github.com/eggheadio/egghead-styles#readme"
+}
