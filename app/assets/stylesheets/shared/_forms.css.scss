@@ -1,0 +1,478 @@
+/* FORMS styles */
+//Bootstrap's styles override
+.form-control {
+  border-radius: 0;
+  border: 2px solid $site-color-silver;
+  padding: 10px 20px 8px 20px;
+  height: 44px;
+  box-shadow: none;
+  font-size: 20px;
+  line-height: 22px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  @include custom-placeholder($site-color-silver-chalice, 20px, 30px);
+  @include respond-to(tablets-small) {
+    @include custom-placeholder($site-color-silver-chalice, 16px, 30px);
+    padding: 2px 10px;
+    height: 34px;
+    line-height: 28px;
+    font-size: 16px;
+  }
+  &:focus {
+    box-shadow: none;
+    border-color: $site-color-silver;
+  }
+  &.error {
+    border-color: $site-color-red;
+  }
+  &.payment-input {
+
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+  @include respond-to(tablets-small) {
+    margin-bottom: 15px;
+  }
+  @include respond-to(phones) {
+    margin-bottom: 10px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+label {
+  font-size: 16px;
+  line-height: 22px;
+  color: $site-color-light-graphite;
+  font-weight: normal;
+  &.required {
+    abbr {
+      border: none;
+    }
+  }
+  @include respond-to(tablets-small) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  @include respond-to(phones) {
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 3px;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+.form-inputs-holder {
+  margin-bottom: 40px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+//Custom Forms Elements
+.custom-checkbox {
+  position: relative;
+  padding-left: 0;
+  label {
+    font-size: 16px;
+    line-height: 20px;
+    vertical-align: top;
+    display: inline-block;
+    font-weight: normal;
+    color: $site-color-dark-graphite;
+    padding-left: 0;
+    width: 100%;
+  }
+  .icon-holder {
+    float: left;
+    margin-right: 15px;
+  }
+  .label-text {
+    overflow: hidden;
+  }
+  input[type='checkbox'] {
+    position: absolute;
+    left: -9999px;
+    &:checked {
+      + .checkbox-icon {
+        &:before {
+          content: "\f00c";
+        }
+      }
+    }
+  }
+  .checkbox-icon {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border: 1px solid $site-color-silver;
+    background: $site-color-white;
+    text-align: center;
+    vertical-align: middle;
+    &:before {
+      font-family: 'Fontawesome';
+      vertical-align: middle;
+    }
+  }
+  &.green {
+    input[type='checkbox'] {
+      &:checked {
+        + .checkbox-icon {
+          color: $site-color-green-dim;
+          border-color: $site-color-green-dim;
+        }
+      }
+    }
+  }
+}
+
+.form-holder {
+
+  margin-left: auto;
+  margin-right: auto;
+  @include respond-to(tablets-small) {
+    max-width: 500px;
+  }
+  @include respond-to(phones) {
+    max-width: 400px;
+  }
+  .colored-box {
+    padding: 15px 15px 30px 15px;
+    @include respond-to(tablets-small) {
+      padding: 30px;
+    }
+    @include respond-to(phones) {
+      padding: 15px 10px 20px 10px;
+    }
+  }
+  .form-control {
+    border-width: 1px;
+    font-size: 16px;
+  }
+  .buttons-holder {
+    .action {
+      color: $link-color;
+    }
+    .custom-btn {
+      margin-right: 15px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  input[type="checkbox"].custom-checkbox {
+    position: static;
+    margin-left: 0;
+    margin-right: 6px;
+    display: inline-block;
+  }
+  .card {
+    right: 21px;
+  }
+}
+
+.special-hack {
+  .col-sm-3, .col-sm-2, .col-sm-7 {
+    padding-right: 5px !important;
+    padding-left: 5px!important;
+  }
+}
+
+.extra-small {
+  font-size: 12px;
+}
+
+
+/* DIFFERENT FORMS */
+.narrow-form-holder {
+  max-width: 500px;
+  @extend .form-holder;
+  .colored-box {
+    padding: 40px;
+    @include respond-to(tablets-small) {
+      padding: 30px;
+    }
+    @include respond-to(phones) {
+      padding: 15px 20px 20px 20px;
+    }
+  }
+}
+.wide-form-holder {
+  max-width: 715px;
+  @extend .form-holder;
+
+  .form-control {
+    height: 34px;
+  }
+  .pull-btn-down {
+    margin-top: 27px;
+  }
+  .actions {
+    font-size: 16px;
+  }
+  .custom-btn-github {
+    margin-top: 5px;
+    @include respond-to(phones) {
+      margin-top: 25px;
+    }
+  }
+}
+
+.card-form-holder {
+  max-width: 600px;
+  @extend .form-holder;
+  .actions {
+    font-size: 16px;
+  }
+  .custom-btn-github {
+    margin-top: 5px;
+    @include respond-to(phones) {
+      margin-top: 25px;
+    }
+  }
+}
+
+.alert-error {
+  @extend .alert-danger;
+}
+
+.sign-form-holder {
+  margin-bottom: 80px;
+}
+
+.stacked-divider {
+  font-size: 22px;
+  margin: 15px 0;
+}
+
+.revision-form-holder {
+  margin-bottom: 20px;
+  text-align: left;
+  .part-left {
+    white-space: nowrap;
+    padding-right: 40px;
+  }
+  .part-right {
+    position: relative;
+  }
+  .questions-holder {
+    margin-bottom: 25px;
+  }
+  .notes-textarea-holder {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    .form-control {
+      height: 100%;
+    }
+  }
+  @include respond-to(tablets-small) {
+    .part {
+      display: block;
+      padding-right: 0;
+      width: 100%;
+    }
+    .part-left {
+      margin-bottom: 20px;
+    }
+    .notes-textarea-holder {
+      position: static;
+      .form-control {
+        height: 100%;
+      }
+    }
+  }
+}
+#revision-form-trigger {
+  color: $site-color-red-dim;
+  font-size: 14px;
+  margin-left: 10px;
+  text-decoration: none;
+  margin-left: 6px;
+  &.collapsed {
+    color: $button-grey-bg;
+    &:hover {
+      color: $button-grey-bg-active;
+    }
+  }
+  .icon {
+    vertical-align: middle;
+  }
+}
+
+.level-up-team-form-holder {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FORMS IN MODALS styles */
+.form-modal {
+  .modal-dialog {
+    @include respond-to(desktops) {
+      width: 860px;
+    }
+  }
+  .modal-content {
+    border-radius: 0;
+  }
+  .modal-header {
+    @extend .clearfix;
+    border: none;
+    padding: 15px 20px 15px 50px;
+    @include respond-to(phones) {
+      padding: 10px 20px 10px 20px;
+    }
+  }
+  .modal-body {
+    padding: 0 50px 50px 50px;
+    @include respond-to(phones) {
+      padding: 0 20px 20px 20px;
+    }
+  }
+  button.close {
+    margin: 0;
+    height: 20px;
+    font-size: 18px;
+    line-height: 20px;
+    @include opacity(0.8);
+    &:hover {
+      @include opacity(1.0);
+    }
+  }
+  .btn-close-icon {
+    font-size: 18px;
+    line-height: 20px;
+    vertical-align: middle;
+    color: $site-color-silver;
+  }
+  .search-field-holder {
+    .input-search {
+      line-height: 24px;
+      height: 50px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+    .btn-submit {
+      margin-top: 5px;
+    }
+  }
+
+  li.disabled {
+    .checkbox-icon:before {
+      content: "\f00c";
+      color: $site-color-silver;
+      border-color: $site-color-green-dim;
+    }
+    .lesson-title {
+      color: $site-color-silver;
+    }
+  }
+}
+
+
+
+
+
+
+
+.light-gray-placeholder {
+  @include custom-placeholder($color: $site-color-silver, $font-size: 16px, $line-height: 22px);
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+/* FF 4-18 */
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+/* FF 19+ */
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+/* IE 10+ */
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+
+/* FF 4-18 */
+textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+/* FF 19+ */
+textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+/* IE 10+ */
+
+// Textarea with chars counter
+.with-counter-holder {
+  position: relative;
+  &.overlimit {
+    &:after {
+      color: red;
+    }
+  }
+  &:after {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    bottom: 0;
+    text-align: right;
+    font-size: 16px;
+    line-height: 20px;
+    color: green;
+    z-index: 1;
+    padding: 10px 5px;
+    content: attr(data-counter);
+  }
+  .with-counter {
+    padding-right: 50px;
+  }
+}
+
+// Bootstrap File Input
+.file-input-wrapper {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+.file-input-wrapper input[type=file],
+.file-input-wrapper input[type=file]:focus,
+.file-input-wrapper input[type=file]:hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0); z-index: 99; outline: 0;
+}
+.file-input-name {
+  margin-left: 8px;
+}
+

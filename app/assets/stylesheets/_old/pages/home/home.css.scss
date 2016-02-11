@@ -1,0 +1,29 @@
+.thumbnail {
+
+  .lesson-header {
+    text-align: center;
+    .pro-badge {
+      background-color: $pro-badge-background;
+      @include border-radius(3px);
+      padding-left: 3px;
+      padding-right: 3px;
+      font-weight: bold;
+      color: $pro-badge-foreground;
+      display: inline-block;
+    }
+    .title {
+      display: inline-block;
+      padding-right: 3px;
+    }
+
+  }
+}
+
+.cta-home {
+  background-color: #f1f5f7;
+  padding: 15px;
+  @include border-radius(10px);
+  border: 1px solid #777777
+}
+
+input[type="text"]#website { display: none; }

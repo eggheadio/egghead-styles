@@ -1,0 +1,39 @@
+/* Various Titles */
+.title-with-logo-holder {
+  margin-bottom: 35px;
+  @include respond-to(phones) {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .logo {
+    margin-right: 25px;
+    @include respond-to(phones) {
+      margin-right: 15px;
+    }
+    img {
+      height: 90px;
+      @include respond-to(phones) {
+        height: 45px;
+      }
+    }
+  }
+  .title {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+  }
+  .admin {
+    float: right;
+    margin-top: 34px;
+    @include respond-to(phones) {
+      display: block;
+      margin-top: 10px;
+      float: none;
+    }
+    .icon {
+      margin-right: 6px;
+      vertical-align: middle;
+      color: $site-color-blue-calypso;
+    }
+  }
+}

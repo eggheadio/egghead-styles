@@ -1,0 +1,27 @@
+/* CORPORATE LOGOS */
+.corporates-logos-row {
+    text-align: center;
+    display: table;
+    width: 100%;
+    margin-bottom: 20px;
+    @include respond-to(phones) {
+        margin-bottom: 0;
+    }
+    .item {
+        float: none;
+        display: inline-block;
+        vertical-align: middle;
+        @include respond-to(phones) {
+            margin-bottom: 10px;
+        }
+    }
+    .corporate-logo {
+        @extend .img-responsive;
+        margin: 0 auto;
+    }
+}
+
+.corporate-logo-small {
+  max-width: 67px;
+  margin: 0 auto;
+}

@@ -1,0 +1,54 @@
+.btn {
+  &:focus {
+    outline: none;
+  }
+}
+
+.custom-btn {
+  @include transition(150ms);
+  display: inline-block;
+  border-style: solid;
+  border-width: 0 0 4px 0;
+  text-decoration: none;
+  box-shadow: none;
+  font-weight: 700;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    outline: none;
+    text-decoration: none;
+    box-shadow: none;
+  }
+  &.disabled {
+    cursor: not-allowed;
+    border-color: $site-color-medium-graphite !important;
+  }
+  &.custom-btn-github {
+    background: $site-color-github;
+    color: $site-color-white;
+    &:hover {
+      background: $site-color-black;
+    }
+  }
+}
+
+@include custom-btn('custom-btn-red', 3px, $button-red-bg, $button-red-bg-active, $button-color, $button-color-active, $button-red-border, $button-red-border-active);
+@include custom-btn('custom-btn-blue', 3px, $button-blue-bg, $button-blue-bg-active, $button-color, $button-color-active, $button-blue-border, $button-blue-border-active);
+@include custom-btn('custom-btn-green', 3px, $button-green-bg, $button-green-bg-active, $button-color, $button-color-active, $button-green-border, $button-green-border-active);
+@include custom-btn('custom-btn-grey', 3px, $button-grey-bg, $button-grey-bg-active, $button-color, $button-color-active, $button-grey-border, $button-grey-border-active);
+@include custom-btn('custom-btn-graphite', 3px, $button-graphite-bg, $button-graphite-bg-active, $button-color, $button-color-active, $button-graphite-border, $button-graphite-border-active);
+@include custom-btn-sizes('custom-btn-primary', 24px, 20px, 18px, 24px, 20px, 18px, 18px 40px 14px 40px, 16px 30px 12px 30px, 13px 20px 11px 20px);
+@include custom-btn-sizes('custom-btn-secondary', 18px, 16px, 14px, 18px, 16px, 14px, 14px 25px 12px 25px, 11px 20px 9px 20px, 8px 10px 6px 10px);
+@include custom-btn-sizes('custom-btn-terciary', 16px, 14px, 12px, 18px, 16px, 14px, 9px 14px 7px 14px, 8px 10px 6px 10px, 6px 8px 4px 8px);
+
+.custom-btn.square-btn-grey {
+  @include transition(150ms);
+  border-style: none;
+  border-radius: 0;
+  color: white;
+  background-color: $button-grey-bg-dark;
+  text-align: center;
+  &:hover {
+    background-color: $button-grey-bg-dark-active;
+  }
+}

@@ -1,0 +1,71 @@
+/* Create square icons, white logo on colored background */
+
+#social-bar .icon {
+
+}
+
+#social-bar .icon-container {
+  font-size: 1.5em;
+  padding: 9px;
+  color: white;
+  border-radius: 4px;
+  min-width: 27px;
+  line-height: 27px;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(128, 128, 128, 0.5);
+}
+
+#social-bar .title {
+  display: inline-block;
+}
+
+#social-bar a {
+  margin-right: 5px;
+  padding: 5px; /* Increase hit rectangle for touch devices */
+}
+
+#social-bar a:first-child {
+  padding-left: 0;
+}
+
+/* Set icon color related to the service */
+
+#social-bar a span {
+  margin-left: 5px;
+}
+
+#social-bar .icon-container-rss {
+  background: #e5842f;
+}
+
+#social-bar .icon-container-facebook {
+  background: #3B5998;
+}
+
+#social-bar .icon-container-twitter {
+  background: #00ACED;
+}
+
+#social-bar .icon-container-google-plus {
+  background: #E14107;
+}
+
+/* Don't underline icon etc. */
+#social-bar a:hover {
+  text-decoration: none;
+}
+
+#social-bar a:hover span {
+  text-decoration: none;
+  color: #333333; /* Match icon highlight color */
+}
+
+/* Animate mouse hover */
+#social-bar a .icon {
+  transition: background 0.1s;
+}
+
+#social-bar a:hover .icon {
+  background: #333333;
+  transition: background 0.1s;
+}

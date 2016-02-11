@@ -1,0 +1,117 @@
+// Place all the styles related to the jobs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jobs-angular-logo {
+  height: 35px;
+  width: auto;
+}
+
+.job-nav-link {
+  color: #fff5df !important;
+  &:hover {
+    color: #ffd42a !important;
+  }
+}
+
+.jobs-angular-logo-small {
+  height: 70px;
+  width: auto;
+  padding-right: 20px;
+  padding-top: 2px;
+}
+
+.job-hero {
+  background-color: #ecf1fb;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  margin-bottom: 15px;
+  h5 {
+    margin-bottom: 0px;
+  }
+  h3 {
+    margin-top: 3px;
+  }
+  @include border-radius(5px);
+
+  .hero-info {
+      padding-top: 10px;
+      h2 {
+        float: left;
+        margin: 0 10px 0 0;
+        font-size: 44px;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: -2px;
+        span {
+          position: relative;
+          top: -12px;
+          margin: 0 4px 0 0;
+          font-size: 24px;
+          font-weight: 300;
+        }
+      }
+      h3 {
+        margin: 5px 0 0 -4px;
+        font-size: 16px;
+        font-weight: normal;
+        letter-spacing: 0;
+
+      }
+      h4 {
+        margin-top: 3px;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1;
+        color: rgba(0,0,0,0.5);
+      }
+
+  }
+
+  .job-link {
+    padding-top: 5px;
+  }
+
+  .btn-job {
+    background-color: #ffffff;
+    &:hover {
+      background-color: #f2f2f2;
+    }
+  }
+}
+
+.listing {
+  padding: 5px;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 14px;
+  &:hover {
+    background: rgba(0,0,0,0.05);
+    text-decoration: none;
+  }
+}
+
+.listing-index {
+  .headline {
+    font-size: 16px;
+  }
+
+  padding: 10px;
+  &:hover {
+    background: rgba(0,0,0,0.05);
+    text-decoration: none;
+  }
+}
+
+.listing-container {
+  a {
+    color: #333;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}
+.listing-border {
+  border-top: 1px solid rgba(0,0,0,0.05);
+}

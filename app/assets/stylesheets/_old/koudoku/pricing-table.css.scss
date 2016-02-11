@@ -1,0 +1,93 @@
+.card-cvc {
+  width: auto;
+}
+ul.koudoku-pricing-table {
+
+  position: relative;
+  margin: 20px 0;
+  padding: 0px;
+  list-style-type: none;
+
+  .pricing-logo {
+    height: 150px;
+    width: auto;
+    text-align: center;
+  }
+
+
+  li.plan {
+
+    text-align: center;
+
+    margin-top: 17px;
+
+    margin-left: 0;
+
+    position: relative;
+    z-index: 99;
+
+    .thumbnail {
+      background-color: #f5f5f5;
+    }
+    &.plan-primary {
+      .thumbnail {
+        background-color: #f9f9f9;
+      }
+
+      margin-top: 0px;
+
+      margin-left: -5px;
+      margin-right: -5px;
+
+      z-index: 100;
+
+      h3 {
+        font-size: 32.5px;
+        line-height: 51px;
+      }
+      h4 {
+        line-height: 22px;
+      }
+      a, input[type=submit] {
+        font-size: 21.5px;
+        line-height: 26px;
+      }
+      ul.features {
+        margin-bottom: 12px;
+        li {
+          font-size: 12pt;
+        }
+      }
+    }
+
+    .call-to-action {
+      margin: 10px 0;
+    }
+
+    .features {
+      margin: 0;
+      li {
+        list-style: none;
+        padding: 8px;
+        line-height: 18px;
+        vertical-align: top;
+        border-top: 1px solid #dddddd;
+      }
+      li:first-child {
+        border-top: none;
+      }
+    }
+
+  }
+
+
+  .social-proof {
+    padding: 17px 0;
+    blockquote {
+      h2, h3, h4 {
+        padding: 5px 0;
+      }
+    }
+  }
+
+}

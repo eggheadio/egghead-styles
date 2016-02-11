@@ -1,0 +1,74 @@
+div.autocomplete-input {
+
+  position: relative;
+  width: 300px;
+  z-index: 1040;
+
+  input {
+    font-size: 16px;
+    padding: 5px 30px 5px 9px;
+    height: 40px;
+    width: 300px;
+    color: #666;
+    border: 1px solid #ccc;
+    outline: none;
+    background: #fcfcfc;
+  }
+
+  ul { list-style-type: none; padding: 0; margin: 0; }
+
+  .react-typeahead-input-container {
+    width: 300px;
+    position: relative;
+  }
+
+  .btn-submit {
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+  }
+
+  ul div.result-listing {
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    color: $site-color-blue;
+
+    &.selected {
+      color: white;
+      background: linear-gradient(#37a3e9,#1285d5);
+    }
+  }
+  @include respond-to(phones) {
+    width: 100%;
+    input,
+    .react-typeahead-input-container {
+      width: 100%;
+    }
+  }
+
+}
+
+.large {
+  div.autocomplete-input {
+    width: 100%;
+    input {
+      font-size: 1.6em;
+      line-height: 1.1;
+    }
+    .react-typeahead-input-container, input {
+      position: relative;
+      width: 100%;
+    }
+
+    ul {
+      text-align: left;
+      border: 1px solid $site-color-grey;
+    }
+  }
+
+}

@@ -1,0 +1,17 @@
+.section-advantages {
+    .item {
+        text-align: center;
+    }
+    .article-logo {
+        font-size: 64px;
+        margin-bottom: 30px;
+        display: inline-block;
+        color: $site-color-red;
+        &:before {
+            display: table;
+        }
+    }
+    .description {
+        display: block;
+    }
+}

@@ -1,0 +1,85 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require autocomplete
+ */
+
+
+/* GLOBALS */
+@import "font-awesome";
+@import "font-awesome/font-awesome";
+@import "compass";
+@import "fontello";
+@import "globals/bootstrap-and-overrides";
+@import "globals/variables";
+@import "globals/mixins";
+@import "globals/grid-helpers";
+@import "globals/fonts";
+
+// _OLD
+//@import "_old/forum/forum-egghead";
+@import "_old/syntax";
+@import "_old/socialbar";
+@import "_old/koudoku/pricing-table";
+@import "_old/components/components";
+@import "_old/util/util";
+@import "_old/pages/pages";
+
+/* PLUGINS */
+@import "chosen";
+@import "plugins/chosen";
+@import "plugins/flipclock";
+
+/* SHARED */
+@import "typeahead-bootstrap";
+@import "social-likes";
+@import "shared/alerts";
+@import "shared/buttons";
+@import "shared/forms";
+@import "shared/titles";
+@import "shared/typography";
+@import "shared/pagination";
+@import "shared/_miscellaneous";
+@import "shared/styles"; // This should be refactored and eliminated
+
+/* SECTIONS */
+@import "sections/header";
+@import "sections/hero";
+@import "sections/footer";
+
+/* COMPONENTS */
+// Lessons
+@import "components/lessons/lesson-email-blocker";
+@import "components/lessons/lesson-playlist-control";
+@import "components/lessons/lesson-series-list";
+@import "components/lessons/popular-lesson-list";
+@import "components/lessons/lessons-list";
+@import "components/lessons/lesson-review-page";
+
+// Playlists
+@import "components/playlists/playlist";
+@import "components/playlists/add-to-button";
+
+// Forum
+@import "components/forum/forum";
+@import "components/forum/posts";
+
+@import "components/autocomplete-input";
+@import "components/advantages";
+@import "components/cc-form";
+@import "components/corporate-logos";
+@import "components/instructor-list";
+@import "components/pricing-grid";
+@import "components/home";
+@import "components/onoff_switch";
+@import "components/search";
+
+

@@ -1,0 +1,46 @@
+/* ALERTS */
+.alert {
+  font-size: $body-font-size;
+  line-height: 22px;
+  padding: 20px;
+  border: none;
+  border-radius: 0;
+  font-size: 1.25em;
+  color: $site-color-white;
+  margin-bottom: 0;
+  @include respond-to(phones) {
+    padding: 10px;
+    line-height: 18px;
+  }
+  &.alert-success {
+    background: $site-color-green-dim;
+  }
+  &.alert-info {
+    background: $site-color-blue-dim;
+  }
+  &.alert-warning {
+    color: $site-color-light-graphite;
+  }
+  &.alert-danger {
+    background: $site-color-red-dim;
+  }
+  &.no-gap {
+    margin-bottom: 0;
+  }
+  button.close {
+    color: rgba($site-color-black, 0.5);
+    float: right;
+    height: 22px;
+    opacity: 1.0;
+    line-height: 22px;
+    text-shadow: none;
+    font-size: 20px;
+    right: -5px;
+    top: 1px;
+    .icon {
+      font-size: 20px;
+      line-height: 22px;
+      vertical-align: middle;
+    }
+  }
+}

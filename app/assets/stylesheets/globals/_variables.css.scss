@@ -1,0 +1,144 @@
+/* MAIN COLOR SCHEME */
+
+// Reds
+$site-color-red-dim: #ef494f;
+$site-color-red: #e13137;
+// Blues
+$site-color-blue-dim: #579edb;
+$site-color-blue: #428bca;
+$site-color-blue-calypso: #2e618d;
+// Greens
+$site-color-green: #5ba82c;
+$site-color-green-dim: #6fab4a;
+$site-color-green-light: #e0f1e0;
+$site-color-apple: #5b9637;
+// Grays
+$site-color-white: #ffffff;
+$site-color-light-grey: #f9f9f9;
+$site-color-grey: #f2f2f2;
+$site-color-harp: #e8f4ed;
+$site-color-blue-light: #ebf9fe;
+$site-color-gallery: #ebebeb;
+$site-color-silver: #c6c6c6;
+$site-color-silver-chalice: #a1a1a1;
+$site-color-dusty-gray: #959595;
+$site-color-light-graphite: #898989;
+$site-color-boulder: #797979;
+$site-color-medium-graphite: #555555;
+$site-color-dark-graphite: #363636;
+$site-color-grey-dark: #252525;
+$site-color-black: #000000;
+
+$site-color-magenta: #d0254d;
+$site-color-teal: #42ace3;
+
+//Brands Colors
+$site-color-github: #333333;
+
+/* GENERAL */
+$body-font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$body-font-size: 20px;
+$body-font-size-tablets-large: 18px;
+$body-font-size-tablets-small: 16px;
+$body-font-size-phones: 14px;
+$body-line-height: 22px;
+$body-font-weight: 400;
+$body-font-color: $site-color-medium-graphite;
+$section-even-bg: $site-color-grey;
+
+$link-color: $site-color-blue-calypso;
+$link-color-underline: #8fb4db;
+$link-active-color: $site-color-blue;
+$link-visited-color: #780080;
+
+$assets-path: '../assets/';
+
+/* BUTTONS */
+$button-color: #ffffff;
+$button-color-active: #ffffff;
+
+$button-red-bg: $site-color-red-dim;
+$button-red-bg-active: $site-color-red;
+$button-red-border: #a73337;
+$button-red-border-active: #9d2226;
+
+$button-blue-bg: $site-color-blue-dim;
+$button-blue-bg-active: $site-color-blue;
+$button-blue-border: #3d6e99;
+$button-blue-border-active: $site-color-blue-calypso;
+
+$button-green-bg: $site-color-apple;
+$button-green-bg-active: $site-color-green;
+$button-green-border: #4d7734;
+$button-green-border-active: #3e6924;
+
+$button-grey-bg-dark: #373636;
+$button-grey-bg-dark-active: #636161;
+
+$button-grey-bg: $site-color-light-graphite;
+$button-grey-bg-active: #646464;
+$button-grey-border: #606060;
+$button-grey-border-active: #454545;
+
+$button-graphite-bg: $site-color-dark-graphite;
+$button-graphite-bg-active: #292727;
+$button-graphite-border: #262626;
+$button-graphite-border-active: #121212;
+
+/* FORMS */
+$input-border-color: $site-color-gallery;
+
+/* HEADER */
+$header-bg: #262626;
+$header-navigation-menu-item-font-size: 16px;
+$header-navigation-menu-item-font-weight: 600;
+$header-navigation-menu-item-font-tablets: 14px;
+$header-navigation-menu-item-line-height: 20px;
+$header-navigation-menu-item-color: #b7b7b7;
+$header-navigation-menu-item-color-hover: #ffffff;
+$header-navigation-menu-item-padding: 5px 10px;
+$header-navigation-menu-item-padding-tablets: 5px 7px;
+$header-search-field-bg: #333333;
+
+/* HERO */
+$hero-title-color: #ffffff;
+$hero-subtitle-font-size: 28px;
+$hero-subtitle-font-size-tablets: 22px;
+$hero-subtitle-font-size-phones: 18px;
+$hero-subtitle-color: #b7b7b7;
+
+
+/* LESSON FRAME */
+$lesson-playlist-background: $site-color-grey-dark;
+$lesson-playlist-action-color: $site-color-light-graphite;
+$lesson-playlist-action-disabled-color: #474747;
+$lesson-playlist-items-border: #303030;
+
+/* SUBSCRIPTION section */
+$subscription-item-bg: $site-color-blue-light;
+$subscription-item-pro-bg: #ffffff;
+
+/* TABS HOLDER */
+$tab-color: $site-color-dark-graphite;
+$tab-color-active: #ffffff;
+$tab-bg: none;
+$tab-bg-active: $site-color-blue;
+$tab-pane-bg: $site-color-grey;
+
+/* PAGINATION  */
+$pagination-links-border-color: $site-color-silver;
+
+/* FOOTER */
+$footer-bg: #333333;
+$footer-titles-color: #ffffff;
+$footer-color: #b7b7b7;
+
+/* MISCELANEOUS */
+
+
+
+
+
+
+
+

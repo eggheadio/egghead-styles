@@ -1,0 +1,69 @@
+.block-lessons {
+    &.block-popular-lessons {
+        margin-bottom: 90px;
+        @include respond-to(phones) {
+            margin-bottom: 40px;
+        }
+    }
+    .item-holder {
+        @include respond-to(phones) {
+            max-width: 360px;
+        }
+    }
+    .item {
+        text-align: left;
+        position: relative;
+        z-index: 1;
+    }
+}
+.media-holder {
+  .overlay {
+    @include transition(150ms);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    background: none rgba(0, 0, 0, 0.6);
+    &:before {
+      @include transition(150ms);
+      font-family: 'FontAwesome';
+      color: $site-color-grey;
+      opacity: 0.5;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 100;
+      content: '\f01d';
+      margin-left: -50px;
+      margin-top: -50px;
+      font-size: 100px;
+      line-height: 100%;
+      text-align: center;
+      width: 100px;
+      height: 100px;
+      @include respond-to(tablets-large) {
+        margin-left: -40px;
+        margin-top: -40px;
+        font-size: 80px;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+      }
+      @include respond-to(tablets-small) {
+        margin-left: -30px;
+        margin-top: -30px;
+        font-size: 60px;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+      }
+    }
+    &:hover {
+      background: none rgba(0, 0, 0, 0.1);
+      &:before {
+        opacity: 0.2;
+      }
+    }
+  }
+}

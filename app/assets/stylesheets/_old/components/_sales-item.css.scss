@@ -1,0 +1,29 @@
+.sales-item {
+  border: 1px solid $gray-light;
+  font-size: 1.0em;
+  @include border-radius(3px);
+  .strike {
+    opacity: 0.8;
+  }
+  .sales-header {
+    padding: 5px;
+    background-color: $gray-lighter;
+    border-bottom: 1px solid $gray-light;
+  }
+  .sales-header-highlighted {
+    padding: 5px;
+    background-color: #e3f1ff !important;
+    border-bottom: 1px solid $gray-light;
+  }
+  .sales-body {
+    padding-top: 10px;
+    height: 250px;
+  }
+  .sales-body-highlight {
+    padding-top: 10px;
+    height: 280px;
+  }
+  .sales-footer {
+    padding-bottom: 10px;
+  }
+}

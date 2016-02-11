@@ -1,0 +1,321 @@
+.lesson-summary {
+
+}
+
+.lesson-trailer {
+  height: 100%;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    position: absolute;
+  }
+
+  top: 0;
+  z-index: 999999;
+}
+
+.hide {
+  display: none;
+}
+
+.semi-opaque {
+  background-color: rgba(255,255,255,0.95);;
+}
+
+.white-background {
+  background-color: rgba(255,255,255,1.0);;
+}
+
+
+
+.light-gray-bottom-border {
+  border-bottom: 1px solid #ececec;
+}
+
+.lesson-meta {
+  display: inline-block;
+  padding-right: 5px;
+}
+// Place all the styles related to the Lessons controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.pro-placeholder {
+  text-align: center;
+  background-color: #222222;
+  color: #eeeeee;
+  font-family: "open-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-bottom: 40px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  padding-top: 1px;
+  @include border-radius(10px);
+  background-image: image-url("static-back.png");
+  background-size: 25% 25%;
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 585px) and (max-width: 767px) {
+    padding-bottom: 50px;
+  }
+  .actions {
+    padding-top: 10px;
+    display: inline-block;
+    .action {
+      display: inline-block;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+  .highlight-pro {
+    color: #ffee1d;
+    font-weight: 500;
+  }
+}
+
+
+
+.no-outline {
+
+}
+.url-clippy-container {
+
+}
+.url-clippy {
+  width: 225px;
+  display: inline-block;
+}
+
+.url-clippy-embed {
+  display: inline-block;
+  position: relative;
+  .inner {
+    position: absolute;
+    top: -11px;
+  }
+}
+
+.min-height-300 {
+  min-height: 300px;
+}
+
+.lesson-info {
+  opacity: 1.0 !important;
+  .summary {
+    color: #666666;
+    background-color: #fff;
+    @include border-radius(3px);
+    @include box-shadow(0 1px 2px rgba(0,0,0,.15) );
+    padding: 10px 5px 10px 10px;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    p {
+      margin: 0;
+    }
+  }
+
+  .pro-badge {
+    background-color: $pro-badge-background;
+
+    @include border-radius(3px);
+    padding-left: 3px;
+    padding-right: 3px;
+    font-weight: bold;
+    color: $pro-badge-foreground;
+    display: inline-block;
+  }
+
+  .title {
+    display: inline-block;
+    padding-right: 5px;
+  }
+
+
+}
+
+.lesson-info-border {
+  border: 1px solid $gray-lighter;
+}
+
+.lesson-info-summary {
+  font-size: .8em;
+}
+
+.pad-10 {
+  padding: 10px;
+}
+.pad-5 {
+  padding: 5px;
+}
+
+.pad-top-5 {
+  padding-top: 5px;
+}
+
+.pad-bottom-5 {
+  padding-bottom: 5px;
+}
+
+.pad-top-10 {
+  padding-top: 10px;
+}
+
+.pad-top-50 {
+  padding-top: 50px;
+}
+.pad-top-40 {
+  padding-top: 40px;
+}
+
+.pad-bottom-10 {
+  padding-bottom: 10px;
+}
+
+.border-radius-15 {
+  @include border-radius(15px);
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.light-gray-background {
+  background-color: $gray-lighter;
+}
+
+.thumbs {
+  border: solid 1px #dfdfdf;
+  background-color: #fdfdfd;
+  .img-thumb {
+    background: #000;
+    img {
+      &:hover {
+        @include opacity(0.9);
+      }
+    }
+
+  }
+  a {
+    text-decoration: none;
+  }
+  .lesson-header {
+
+    padding: 10px 5px;
+    padding-right: 15px;
+    background-color: #151515;
+    &:hover {
+      background-color: #1f1f1f;
+      color: #f0f0f0;
+    }
+    color: #fff;
+    .pro-badge {
+      background-color: $pro-badge-background;
+      @include border-radius(3px);
+      padding-left: 3px;
+      padding-right: 3px;
+      font-weight: bold;
+      color: $pro-badge-foreground;
+      display: inline-block;
+    }
+    .title {
+      display: inline-block;
+      padding-right: 3px;
+    }
+  }
+  .lesson-summary {
+    padding: 5px;
+    padding-top: 10px;
+
+    img.tech-icon {
+      height: 45px;
+      width: auto;
+      padding: 5px;
+    }
+  }
+
+}
+.lesson-list {
+  border: 1px solid #ccc9bf;
+  @include border-radius(6px);
+  .lesson {
+    background: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc9bf;
+    position: relative;
+  }
+  .lesson-alt {
+    background: #f0f0f0;
+  }
+}
+
+.pad-bottom {
+  padding-bottom: 10px;
+}
+
+.yt-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 0 auto !important;
+  float: none !important;
+  text-align: center;
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
+  iframe, embed, object {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+}
+
+.yt-wrapper-small {
+  @extend .yt-wrapper;
+  padding-bottom: 32.25%;
+}
+
+.breadcrumb {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.center { float: none; margin-left: auto; margin-right: auto; }
+
+.alert {
+  .highlight {
+    padding-top: 10px;
+  }
+}
+
+.lesson-watched {
+  > td:not(.cell-add-to) {
+    opacity: 0.5;
+  }
+  a {
+    color: #555555
+  }
+  .complete {
+    color: #41a048;
+  }
+}
+
+.not-completed {
+  color: #555555
+}
+
+.not-liked {
+  opacity: 0.7;
+  background-color: #333333;
+  border-color: #333333;
+}

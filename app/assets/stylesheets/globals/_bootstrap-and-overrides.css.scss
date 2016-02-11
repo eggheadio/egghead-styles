@@ -1,0 +1,66 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$pro-badge-background: #7e3b44;
+$pro-badge-foreground: #dfd662;
+
+body {
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "open-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.btn-logo {
+  width: 30px;
+  height: auto;
+}
+
+.banner-h4 {
+  font-size: 24px;
+  line-height: 1.1;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.banner-container{
+  padding-top: 16px;
+  padding-bottom: 10px;
+}
+
+.row {
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+
+.img-responsive-inline {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.form-inline .form-group{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+.panel {
+  background-color: lighten(#000, 96.5%);
+}
+
+.dropdown {
+  z-index: 1051;
+}
+
+.well {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

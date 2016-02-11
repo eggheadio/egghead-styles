@@ -1,0 +1,129 @@
+// Different devices resolutions
+@mixin respond-to($media) {
+    @if $media == phones {
+      @media only screen and (max-width: $screen-xs-max) { @content; }
+    }
+    @else if $media == tablets-small {
+        @media only screen and (max-width: $screen-sm-max) { @content; }
+    }
+    @else if $media == tablets-large {
+        @media only screen and (max-width: $screen-md-max) { @content; }
+    }
+    @else if $media == desktops {
+        @media only screen and (min-width: $screen-lg-min) { @content; }
+    }
+}
+
+
+// Buttons
+@mixin custom-btn($button-class, $border-radius, $background, $background-hover, $color, $color-hover, $border, $border-hover) {
+    .custom-btn.#{$button-class} {
+        @include transition(150ms);
+        display: inline-block;
+        background: #{$background};
+        color: #{$color};
+        border-style: solid;
+        border-width: 0 0 4px 0;
+        border-color: #{$border};
+        border-radius: #{$border-radius};
+        text-decoration: none;
+        box-shadow: none;
+    }
+    .custom-btn.#{$button-class}:hover {
+        background: #{$background-hover};
+        color: #{$color-hover};
+        border-color: #{$border-hover};
+        text-decoration: none;
+        box-shadow: none;
+    }
+}
+
+@mixin custom-btn-sizes($size-class, $font-size, $font-size-tablets, $font-size-phones, $line-height, $line-height-tablets, $line-height-phones, $padding, $padding-tablets, $padding-phones) {
+    .custom-btn.#{$size-class} {
+        font-size: $font-size;
+        line-height: $line-height;
+        padding: $padding;
+        font-weight: 700;
+        @include respond-to(tablets-small) {
+            font-size: $font-size-tablets;
+            line-height: $line-height-tablets;
+            padding: $padding-tablets;
+        }
+        @include respond-to(phones) {
+            font-size: $font-size-phones;
+            line-height: $line-height-phones;
+            padding: $padding-phones;
+        }
+    }
+}
+
+// Labels
+@mixin custom-label($label-class, $background, $background-hover) {
+    .custom-label.#{$label-class} {
+        display: inline;
+        border-radius: 3px;
+        padding: 3px 10px;
+        color: #ffffff;
+        font-size: 14px;
+        text-decoration: none;
+        background: $background;
+        &:hover {
+            text-decoration: none;
+            background: $background-hover;
+        }
+        &.super {
+            vertical-align: super;
+        }
+    }
+}
+
+// Placeholder text
+@mixin custom-placeholder($color: $input-color-placeholder, $font-size: $input-font-size-placeholder, $line-height: $input-line-height-placeholder) {
+    &:-moz-placeholder {
+        color: $color;
+        font-size: $font-size;
+        line-height: $line-height;
+        opacity: 1;
+}
+    &::-moz-placeholder {
+        color: $color;
+        font-size: $font-size;
+        line-height: $line-height;
+        opacity: 1;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+        font-size: $font-size;
+        line-height: $line-height;
+        opacity: 1;
+    }
+    &::-webkit-input-placeholder {
+        color: $color;
+        font-size: $font-size;
+        line-height: $line-height;
+        opacity: 1;
+    }
+}
+
+// Tech Logos
+@mixin tech-logos($logo-class, $background-position, $background-position-mobile) {
+    &.overlay-#{$logo-class} {
+        &:after {
+            background-position: right $background-position;
+            @include respond-to(tablets-small) {
+                background-position: right $background-position-mobile;
+            }
+        }
+    }
+}
+
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}

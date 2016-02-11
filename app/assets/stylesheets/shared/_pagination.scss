@@ -1,0 +1,80 @@
+/* Pagination */
+
+.pagination {
+  font-size: 16px;
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  > li {
+    > a, span {
+      line-height: 34px;
+      min-width: 40px;
+      text-align: center;
+      color: $link-color;
+      border-color: $pagination-links-border-color;
+      @include respond-to(phones) {
+        min-width: 34px;
+        line-height: 26px;
+        padding: 6px;
+      }
+    }
+    &.active {
+      > a, > a:focus, > span {
+        background: none $site-color-grey;
+        border-color: $pagination-links-border-color;
+        color: $site-color-light-graphite;
+        box-shadow: 2px 2px 3px $pagination-links-border-color inset;
+        &:hover {
+          cursor: default;
+          background: none $site-color-grey;
+          border-color: $pagination-links-border-color;
+          color: $site-color-light-graphite;
+        }
+      }
+    }
+  }
+  .direction-title {
+    @include respond-to(phones) {
+      display: none;
+    }
+  }
+  .direction-icon {
+    font-size: 12px;
+    position: relative;
+    top: -1px;
+  }
+  .next,
+  .prev {
+    > a {
+      color: $site-color-blue-calypso;
+      @include respond-to(phones) {
+        min-width: 40px;
+      }
+    }
+  }
+  .prev {
+    .direction-icon {
+      margin-right: 7px;
+      @include respond-to(phones) {
+        margin-right: 0;
+      }
+    }
+  }
+  .next {
+    .direction-icon {
+      margin-left: 7px;
+      @include respond-to(phones) {
+        margin-left: 0;
+      }
+    }
+  }
+  > .disabled {
+    > span {
+      color: $site-color-light-graphite;
+      &:hover {
+        color: $site-color-light-graphite;
+      }
+    }
+  }
+}

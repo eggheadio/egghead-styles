@@ -1,0 +1,65 @@
+.jumbotron {
+  background-color: #090909;
+  color: #fff;
+  padding-top: 36px;
+  padding-bottom: 80px;
+  font-family: "open-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 585px) and (max-width: 767px) {
+    padding-bottom: 50px;
+  }
+  .text-yellow {
+    color: #fff246;
+  }
+  .jumbotron-text {
+    text-align: center;
+    position: absolute;
+    //bottom: 60px;
+    left: 0;
+    width: 100%;
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      //bottom: 20px;
+    }
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      //bottom: 0;
+    }
+  }
+  .jumbotron-container {
+    margin: 0 auto;
+    position: relative;
+
+  }
+  .headline {
+    font-size: 42px;
+    letter-spacing: -0.050em;
+    line-height: 0.9em;
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      font-size: 30px;
+      line-height: 1em;
+
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 20px;
+    }
+
+  }
+  .sub-headline {
+    margin-top: 7px;
+    line-height: 1.25em;
+    display: block;
+    font-weight: 400;
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      font-size: 14px;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 12px;
+    }
+  }
+  .jumbotron-graphic {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
