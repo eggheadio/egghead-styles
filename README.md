@@ -1,2 +1,2 @@
 # egghead-styles
-Hold the master stylesheet for all of egghead
+Holds the master stylesheet for all of egghead
