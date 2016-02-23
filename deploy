@@ -44,16 +44,14 @@ if (hasType && !_.includes(amounts, type)) {
   console.log('\n--- Updating Rails Version\n');
   exec('gem bump --version ' + newVersion);
 
-  if (_.isUndefined(publish)) { // publish will also build
-    console.log('\n--- Building Rails Gem\n');
-    exec('rake build');
-  }
+  console.log('\n--- Building Rails Gem\n');
+  exec('rake build');
 }
 
-if (publish === true) {
+if (publish) {
   console.log('\n--- Publishing to NPM\n');
   exec('npm publish .');
 
   console.log('\n--- Building and Publishing to RubyGems\n');
-  exec('rake release');
+  exec('gem push pkg/egghead-styles-' + newVersion);
 }
