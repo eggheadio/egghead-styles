@@ -7,13 +7,7 @@ var Package = require('./package.json')
 
 var argv = require('minimist')(process.argv.slice(2));
 
-// program
-//   .version(Package.version)
-//   .option('-b, --bump <version bump>', 'Desired bump amount <version, major, minor, patch>', /^(major|minor|patch)$/i, 'patch')
-//   .option('-u, --update', 'Update to [value]', 'hello')
-//   .option('-m, --message', 'Provide version commit message. New version will replace %s', undefined)
-//   .option('-r, --release', 'Release to NPM and RubyGems')
-//   .parse(process.argv);
+set('-e') // exit on error
 
 if (!process.argv.slice(2).length) {
   console.log();
@@ -34,12 +28,11 @@ if (_.isUndefined(type)) {
   process.exit(1);
 }
 
-console.log('HI: %s', type)
+console.log('--- Updating NPM Version');
 var command = exec('npm version ' + type, {silent:false}).output;
-console.log('out: %s', command)
 
 if (_.isNull(error())) {
-  console.log(command.match(semverRegex()));
+  console.log(command.match(semverRegex())[0]);
 } else {
   console.log(error())
 }
