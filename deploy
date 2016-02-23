@@ -25,6 +25,12 @@ if (!process.argv.slice(2).length) {
 var type = _.get(argv, 'b', argv.bump);
 var silent = _.get(argv, 's', argv.silent)
 
+var hasGitChanges = exec('git status --porcelain', {silent:true}).output.length > 0;
+if (hasGitChanges) {
+  console.log('Git repo must not have uncommitted changes, be up-to-date, and pushed to origin.');
+  process.exit(1);
+}
+
 if (_.isUndefined(type)) {
   console.log('Bump amount required!');
   process.exit(1);
