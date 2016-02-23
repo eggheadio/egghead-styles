@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+
+var semverRegex = require('semver-regex');
+var _ = require('lodash');
+require('shelljs/global');
+var Package = require('./package.json')
+
+var argv = require('minimist')(process.argv.slice(2));
+
+// program
+//   .version(Package.version)
+//   .option('-b, --bump <version bump>', 'Desired bump amount <version, major, minor, patch>', /^(major|minor|patch)$/i, 'patch')
+//   .option('-u, --update', 'Update to [value]', 'hello')
+//   .option('-m, --message', 'Provide version commit message. New version will replace %s', undefined)
+//   .option('-r, --release', 'Release to NPM and RubyGems')
+//   .parse(process.argv);
+
+if (!process.argv.slice(2).length) {
+  console.log();
+  console.log('usage: deploy [options]');
+  console.log();
+  console.log('options: ');
+  console.log();
+  console.log('-b, --bump <version bump> :: Desired bump amount <version, major, minor, patch>');
+  console.log('-r, --release :: Release to NPM and RubyGems');
+  console.log();
+  process.exit(0);
+}
+
+var type = _.get(argv, 'b', argv.bump);
+
+if (_.isUndefined(type)) {
+  console.log('Bump level/version required!');
+  process.exit(1);
+}
+
+console.log('HI: %s', type)
+var command = exec('npm version ' + type, {silent:false}).output;
+console.log('out: %s', command)
+
+if (_.isNull(error())) {
+  console.log(command.match(semverRegex()));
+} else {
+  console.log(error())
+}
+

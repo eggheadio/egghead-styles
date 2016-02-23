@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/eggheadio/egghead-styles/issues"
   },
-  "homepage": "https://github.com/eggheadio/egghead-styles#readme"
+  "homepage": "https://github.com/eggheadio/egghead-styles#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "lodash": "^4.5.1",
+    "minimist": "^1.2.0",
+    "semver-regex": "^1.0.0",
+    "shelljs": "^0.6.0"
+  }
 }
