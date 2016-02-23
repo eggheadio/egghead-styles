@@ -15,25 +15,26 @@ if (!process.argv.slice(2).length) {
   console.log();
   console.log('options: ');
   console.log();
-  console.log('-b, --bump <version bump> :: Desired bump amount <version, major, minor, patch>');
-  console.log('-r, --release :: Release to NPM and RubyGems');
+  console.log('-b, --bump <bump> :: Desired bump amount <major, minor, patch>');
+  console.log('-s, --silent :: Do not publish to NPM and RubyGems');
   console.log();
   process.exit(0);
 }
 
 var type = _.get(argv, 'b', argv.bump);
+var silent = _.get(argv, 's', argv.silent)
 
 if (_.isUndefined(type)) {
-  console.log('Bump level/version required!');
+  console.log('Bump amount required!');
   process.exit(1);
 }
 
 console.log('--- Updating NPM Version');
-var command = exec('npm version ' + type, {silent:false}).output;
+var newVersion = exec('npm version ' + type).output.match(semverRegex())[0];
 
-if (_.isNull(error())) {
-  console.log(command.match(semverRegex())[0]);
-} else {
-  console.log(error())
+console.log('--- Updating Rails Version');
+exec('gem bump --version ' + newVersion)
+
+if (!silent) {
+
 }
-
