@@ -17,6 +17,15 @@ Perform the following commands within the `egghead-styles` directory and login t
 * `npm login`
 * `gem push` (this will produce a "Please specify a gem name on the command line" error, ignore it)
 
+### Building the packages
+
+The `deploy` script is responsible for bumping versions and publishing to NPM/RubyGems. There are two flags which enable this:
+
+`./deploy -b, --bump <major, minor, patch>`
+`./deploy -p, --publish`
+
+For instance, to provide a patch bump and publish, use `./deploy -b patch -p`
+
 ## Local Development
 
 `egghead-styles` has the same setup as `egghead-rails` in that `egghead-systems` references both from the same root directory. By default, the Gemfile points to `egghead-styles'` repository and will pull the gem from Github if it cannot find a substitute. This isn't conducive for local development as it would require redeploying the gem for every change.
