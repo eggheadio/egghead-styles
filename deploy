@@ -6,6 +6,7 @@ require('shelljs/global');
 var Package = require('./package.json')
 
 var argv = require('minimist')(process.argv.slice(2));
+var repoName = 'egghead-styles';
 
 set('-e') // exit on error
 
@@ -29,14 +30,14 @@ if (_.isUndefined(type)) {
   process.exit(1);
 }
 
-console.log('\n--- Updating NPM Version\n');
+console.log('\n--- Updating ' + repoName + ' NPM Version\n');
 var newVersion = exec('npm version ' + type).output.match(semverRegex())[0].replace(/^v+/, "");
 
 console.log('\n--- Updating Rails Version\n');
 exec('gem bump --version ' + newVersion);
 
 console.log('\n--- Building Rails Gem\n');
-exec('gem build egghead-styles.gemspec');
+exec('gem build ' + repoName + '.gemspec');
 
 if (!silent) {
 
