@@ -1,5 +1,5 @@
 module Egghead
   module Styles
-    VERSION = "1.0.0"
+    VERSION = "v1.0.3"
   end
 end
