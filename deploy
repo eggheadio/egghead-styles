@@ -30,10 +30,12 @@ if (_.isUndefined(type)) {
 }
 
 console.log('--- Updating NPM Version');
-var newVersion = exec('npm version ' + type).output.match(semverRegex())[0];
+var newVersion = exec('npm version ' + type).output.match(semverRegex())[0].replace(/^(v\.)/,"");
 
 console.log('--- Updating Rails Version');
-exec('gem bump --version ' + newVersion)
+exec('gem bump --version ' + newVersion);
+console.log('--- Building Rails Gem');
+exec('gem build egghead-styles.gemspec');
 
 if (!silent) {
 
