@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 
+require('shelljs/global');
+
 var semverRegex = require('semver-regex');
 var _ = require('lodash');
-require('shelljs/global');
 var Package = require('./package.json')
-
 var argv = require('minimist')(process.argv.slice(2));
+
 var repoName = 'egghead-styles';
+var amounts = ['major', 'minor', 'patch'];
 
 set('-e') // exit on error
 
@@ -16,39 +18,39 @@ if (!process.argv.slice(2).length) {
   console.log();
   console.log('options: ');
   console.log();
-  console.log('-b, --bump <bump> :: Desired bump amount <major, minor, patch>');
-  console.log('-s, --silent :: Do not publish to NPM and RubyGems');
+  console.log('-b, --bump <bump> :: Desired bump amount <' + amounts.join(', ') + '>');
+  console.log('-p, --publish :: Publish to NPM and RubyGems');
   console.log();
   process.exit(0);
 }
 
 var type = _.get(argv, 'b', argv.bump);
-var silent = _.get(argv, 's', argv.silent)
+var publish = _.get(argv, 'p', argv.publish)
 
 var hasGitChanges = exec('git status --porcelain', {silent:true}).output.length > 0;
 if (hasGitChanges) {
-  console.log('Git repo must not have uncommitted changes, be up-to-date, and pushed to origin.');
+  console.log('Git repo must not have uncommitted changes.');
   process.exit(1);
 }
 
-if (_.isUndefined(type)) {
+if (!_.isUndefined(type) && !_.find(amounts, type)) {
   console.log('Bump amount required!');
   process.exit(1);
+} else if (!_.isUndefined(type)) {
+  console.log('\n--- Updating ' + repoName + ' NPM Version\n');
+  var newVersion = exec('npm version ' + type).output.match(semverRegex())[0].replace(/^v+/, "");
+
+  console.log('\n--- Updating Rails Version\n');
+  exec('gem bump --version ' + newVersion);
+
+  console.log('\n--- Building Rails Gem\n');
+  exec('rake build');
 }
 
-console.log('\n--- Updating ' + repoName + ' NPM Version\n');
-var newVersion = exec('npm version ' + type).output.match(semverRegex())[0].replace(/^v+/, "");
-
-console.log('\n--- Updating Rails Version\n');
-exec('gem bump --version ' + newVersion);
-
-console.log('\n--- Building Rails Gem\n');
-exec('rake build');
-
-if (!silent) {
+if (publish) {
   console.log('\n--- Publishing to NPM\n');
   exec('npm publish .');
 
-
-
+  console.log('\n--- Publishing to RubyGems\n');
+  exec('rake release');
 }
