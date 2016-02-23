@@ -40,5 +40,7 @@ console.log('\n--- Building Rails Gem\n');
 exec('gem build ' + repoName + '.gemspec');
 
 if (!silent) {
+  console.log('--- Publishing to NPM');
+
 
 }
