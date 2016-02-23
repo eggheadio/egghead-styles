@@ -29,13 +29,13 @@ if (_.isUndefined(type)) {
   process.exit(1);
 }
 
-console.log('--- Updating NPM Version');
+console.log('\n--- Updating NPM Version\n');
 var newVersion = exec('npm version ' + type).output.match(semverRegex())[0].replace(/^v+/, "");
 console.log('new version: ' + newVersion);
 
-console.log('--- Updating Rails Version');
+console.log('\n--- Updating Rails Version\n');
 exec('gem bump --version ' + newVersion);
-console.log('--- Building Rails Gem');
+console.log('\n--- Building Rails Gem\n');
 exec('gem build egghead-styles.gemspec');
 
 if (!silent) {
