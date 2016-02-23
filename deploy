@@ -50,7 +50,7 @@ if (hasType && !_.includes(amounts, type)) {
 
 if (publish) {
 
-  var npmVersion = JSON.parse(exec('npm view .').output).version;
+  var npmVersion = exec('npm view .', {silent:true}).output.version;
   console.log('VERSION! ' + npmVersion);
 
   if (npmVersion !== newVersion) {
