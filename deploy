@@ -43,7 +43,7 @@ console.log('\n--- Updating Rails Version\n');
 exec('gem bump --version ' + newVersion);
 
 console.log('\n--- Building Rails Gem\n');
-exec('gem build ' + repoName + '.gemspec');
+exec('gem build pkg/' + repoName + '.gemspec');
 
 if (!silent) {
   console.log('\n--- Publishing to NPM\n');
