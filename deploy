@@ -62,5 +62,5 @@ if (publish) {
   }
 
   console.log('\n--- Building and Publishing to RubyGems\n');
-  exec('gem push pkg/egghead-styles-' + newVersion);
+  exec('gem push pkg/egghead-styles-' + newVersion + '.gem');
 }
