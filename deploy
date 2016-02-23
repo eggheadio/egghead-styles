@@ -53,7 +53,7 @@ if (hasType && !_.includes(amounts, type)) {
 if (publish) {
 
   // Totally freaking unsafe, but NPM provides a literal object, lame
-  var npmVersion = eval('(' + exec('npm view .', {silent:true}).output + ')');
+  var npmVersion = eval('(' + exec('npm view .', {silent:true}).output + ')').version;
   console.log('VERSION! ' + npmVersion);
 
   if (npmVersion !== newVersion) {
