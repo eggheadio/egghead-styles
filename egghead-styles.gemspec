@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Holds styles required for egghead.io}
   spec.homepage      = "https://github.com/eggheadio/egghead-styles"
-  spec.description   = %q{Holds styles required for egghead.io}
+  spec.description   = %q{To reduce development friction, egghead.io has extracted it's core CSS styles into a gem for use across projects.}
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
