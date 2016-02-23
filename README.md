@@ -10,13 +10,12 @@ Setup all required dependencies. Run: `npm i && bundle install`
 
 Before you can publish to NPM or RubyGems, you must first authenticate with each service.
 
-### NPM
+### Log into NPM and RubyGems
 
-Type `npm login` within the `egghead-styles` directory and login to NPM with your egghead account that has publishing privileges. Contact an egghead admin for publishing access if needed.
+Perform the following commands within the `egghead-styles` directory and login to NPM with your egghead account that has publishing privileges. Contact an egghead admin for publishing access if needed.
 
-### RubyGems
-
-
+* `npm login`
+* `gem push` (this will produce a "Please specify a gem name on the command line" error, ignore it)
 
 ## Local Development
 

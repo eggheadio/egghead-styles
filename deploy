@@ -44,14 +44,16 @@ if (hasType && !_.includes(amounts, type)) {
   console.log('\n--- Updating Rails Version\n');
   exec('gem bump --version ' + newVersion);
 
-  console.log('\n--- Building Rails Gem\n');
-  exec('rake build');
+  if (!publish) { // publish will also build
+    console.log('\n--- Building Rails Gem\n');
+    exec('rake build');
+  }
 }
 
 if (publish) {
   console.log('\n--- Publishing to NPM\n');
   exec('npm publish .');
 
-  console.log('\n--- Publishing to RubyGems\n');
+  console.log('\n--- Building and Publishing to RubyGems\n');
   exec('rake release');
 }
