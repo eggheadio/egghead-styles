@@ -21,8 +21,8 @@ Perform the following commands within the `egghead-styles` directory and login t
 
 The `deploy` script is responsible for bumping versions and publishing to NPM/RubyGems. There are two flags which enable this:
 
-`./deploy -b, --bump <major, minor, patch>`
-`./deploy -p, --publish`
+* `./deploy -b, --bump <major, minor, patch>`
+* `./deploy -p, --publish`
 
 For instance, to provide a patch bump and publish, use `./deploy -b patch -p`
 
@@ -35,8 +35,6 @@ For local development, we want `bundle` to see live changes to the gem. Tell `bu
 `bundle config local.egghead-styles /egghead-styles`
 
 Vagrant mounts `egghead-styles` to the root of the VM at `/egghead-styles`. Changes to the local copy will now reflect in development. Run `foreman` as usual.
-
-To compile the gem withou publishing, use the `-s` (--silent) flag when deploying `./deploy -s`
 
 #### References
 
