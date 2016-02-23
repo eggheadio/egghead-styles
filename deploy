@@ -49,8 +49,14 @@ if (hasType && !_.includes(amounts, type)) {
 }
 
 if (publish) {
-  console.log('\n--- Publishing to NPM\n');
-  exec('npm publish .');
+
+  var npmVersion = JSON.parse(exec('npm view .').output).version;
+  console.log('VERSION! ' + npmVersion);
+
+  if (npmVersion !== newVersion) {
+    console.log('\n--- Publishing to NPM\n');
+    exec('npm publish .');
+  }
 
   console.log('\n--- Building and Publishing to RubyGems\n');
   exec('gem push pkg/egghead-styles-' + newVersion);
