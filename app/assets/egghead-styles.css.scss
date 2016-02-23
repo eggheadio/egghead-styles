@@ -9,9 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require autocomplete
  */
-
 
 /* GLOBALS */
 @import "font-awesome";
@@ -23,6 +21,7 @@
 @import "globals/mixins";
 @import "globals/grid-helpers";
 @import "globals/fonts";
+@import "globals/colors";
 
 // _OLD
 //@import "_old/forum/forum-egghead";
@@ -54,32 +53,5 @@
 @import "sections/header";
 @import "sections/hero";
 @import "sections/footer";
-
-/* COMPONENTS */
-// Lessons
-@import "components/lessons/lesson-email-blocker";
-@import "components/lessons/lesson-playlist-control";
-@import "components/lessons/lesson-series-list";
-@import "components/lessons/popular-lesson-list";
-@import "components/lessons/lessons-list";
-@import "components/lessons/lesson-review-page";
-
-// Playlists
-@import "components/playlists/playlist";
-@import "components/playlists/add-to-button";
-
-// Forum
-@import "components/forum/forum";
-@import "components/forum/posts";
-
-@import "components/autocomplete-input";
-@import "components/advantages";
-@import "components/cc-form";
-@import "components/corporate-logos";
-@import "components/instructor-list";
-@import "components/pricing-grid";
-@import "components/home";
-@import "components/onoff_switch";
-@import "components/search";
 
 

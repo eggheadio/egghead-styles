@@ -3,12 +3,10 @@ header {
   padding: 10px 10px 0px 10px;
   background: $header-bg;
   z-index: 1050;
-  @include respond-to(phones) {
-    padding: 10px 15px;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
+  @include respond-to(phones-landscape) {
+    ul.dropdown-menu > li > a {
+      color: $color-dusty-gray;
+    }
   }
 }
 

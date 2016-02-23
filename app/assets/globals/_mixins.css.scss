@@ -1,19 +1,47 @@
-// Different devices resolutions
+/* MIXINS */
+
 @mixin respond-to($media) {
-    @if $media == phones {
-      @media only screen and (max-width: $screen-xs-max) { @content; }
-    }
-    @else if $media == tablets-small {
-        @media only screen and (max-width: $screen-sm-max) { @content; }
-    }
-    @else if $media == tablets-large {
-        @media only screen and (max-width: $screen-md-max) { @content; }
-    }
-    @else if $media == desktops {
-        @media only screen and (min-width: $screen-lg-min) { @content; }
-    }
+  @if $media == phones {
+    @media only screen and (max-width: $screen-xs-max) { @content; }
+  }
+  @else if $media == tablets-small {
+    @media only screen and (max-width: $screen-sm-max) { @content; }
+  }
+  @else if $media == tablets-large {
+    @media only screen and (max-width: $screen-md-max) { @content; }
+  }
+  @else if $media == desktops {
+    @media only screen and (min-width: $screen-lg-min) { @content; }
+  }
 }
 
+// Responsive breakpoints
+@mixin responsive-for($media) {
+  @if $media == phones-portrait {
+    @media only screen and (max-width: 479px) { @content; }
+  }
+  @if $media == phones-landscape {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+  @else if $media == tablets-portrait {
+    @media only screen and (max-width: 991px) { @content; }
+  }
+  @else if $media == tablets-landscape {
+    @media only screen and (max-width: 1024px) { @content; }
+  }
+  @else if $media == desktops {
+    @media only screen and (min-width: 1025px) { @content; }
+  }
+}
+
+// Vertical gradient, from top to bottom
+@mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Opera 12
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}
 
 // Buttons
 @mixin custom-btn($button-class, $border-radius, $background, $background-hover, $color, $color-hover, $border, $border-hover) {
