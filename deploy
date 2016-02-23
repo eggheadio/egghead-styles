@@ -47,6 +47,8 @@ exec('rake build');
 
 if (!silent) {
   console.log('\n--- Publishing to NPM\n');
+  exec('npm publish .');
+
 
 
 }
