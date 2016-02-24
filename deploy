@@ -65,7 +65,7 @@ if (publish) {
   exec('gem push pkg/egghead-styles-' + newVersion + '.gem');
 }
 
-console.log('\n--- Finished! Be sure to '.green + 'sudo bundle update egghead-styles'.yellow.bold + ' in the egghead-rails repository.\n'.green);
+console.log('\n--- Finished! Be sure to '.green + 'sudo bundle update egghead-styles'.yellow.bold + ' or '.green + 'npm update egghead-styles'.yellow.bold + ' in parent repositories.\n'.green);
 
 
 

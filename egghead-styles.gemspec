@@ -27,5 +27,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'compass-rails', '~> 1.1.7'
   spec.add_runtime_dependency 'fontello-rails'
   spec.add_runtime_dependency 'font-awesome-rails'
+  spec.add_runtime_dependency 'chosen-rails'
 
 end
