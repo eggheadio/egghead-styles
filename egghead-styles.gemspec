@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{To reduce development friction egghead.io has extracted its core CSS styles into a gem for use across projects.}
   spec.license       = "MIT"
 
-  spec.files         = Dir["{lib,app}/**/*"] + ["README.md"]
+  spec.files         = Dir["{lib,app,vendor}/**/*"] + ["README.md"]
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
