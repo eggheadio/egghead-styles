@@ -40,7 +40,7 @@ if (hasType && !_.includes(amounts, type)) {
   console.log(('Bump amount required! ' + (_.isString(type) ? '"' + type.bold + '" is invalid. Please use ' + amounts.join(', ').bold.white + '.' : '')).red);
   process.exit(1);
 } else if (hasType) {
-  console.log('\n--- Updating ' + repoName + ' NPM Version\n'.green);
+  console.log(('\n--- Updating ' + repoName + ' NPM Version\n').green);
   newVersion = exec('npm version ' + type).output.match(semverRegex())[0].replace(/^v+/, "");
 
   console.log('\n--- Updating Rails Version\n'.green);
@@ -65,7 +65,7 @@ if (publish) {
   exec('gem push pkg/egghead-styles-' + newVersion + '.gem');
 }
 
-console.log(('\n--- Finished! Be sure to ' + 'sudo bundle update egghead-styles'.bold + '\n').green);
+console.log(('\n--- Finished! Be sure to ' + 'sudo bundle update egghead-styles'.yellow.bold + 'in the egghead-rails repository.\n').green);
 
 
 
