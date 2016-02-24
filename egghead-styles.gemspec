@@ -21,5 +21,11 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency 'gem-release', '~> 0.7.4'
+
+  spec.add_runtime_dependency 'compass', '~> 0.12.4'
+  spec.add_runtime_dependency 'compass-rails', '~> 1.1.7'
+  spec.add_runtime_dependency 'fontello-rails'
+  spec.add_runtime_dependency 'font-awesome-rails'
 
 end
