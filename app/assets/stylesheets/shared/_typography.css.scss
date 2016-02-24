@@ -13,7 +13,6 @@ body {
 	}
 	@include respond-to(phones) {
 		font-size: $body-font-size-phones;
-		// padding-top: 52px;
 	}
 }
 
