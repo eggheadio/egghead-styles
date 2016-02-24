@@ -37,7 +37,7 @@ if (hasGitChanges) {
 }
 
 if (hasType && !_.includes(amounts, type)) {
-  console.log(('Bump amount required! ' + (_.isString(type) ? '"' + type + '" is invalid. Please use ' + amounts.join(', ').bold.white + '.' : '')).red);
+  console.log(('Bump amount required! ' + (_.isString(type).bold ? '"' + type + '" is invalid. Please use ' + amounts.join(', ').bold.white + '.' : '')).red);
   process.exit(1);
 } else if (hasType) {
   console.log('\n--- Updating ' + repoName + ' NPM Version\n'.green);
