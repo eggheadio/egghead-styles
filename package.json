@@ -1,6 +1,6 @@
 {
   "name": "egghead-styles",
-  "version": "1.0.49",
+  "version": "1.0.50",
   "description": "Holds all of egghead.io's styles",
   "main": "index.js",
   "scripts": {
