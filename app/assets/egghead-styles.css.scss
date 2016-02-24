@@ -9,11 +9,11 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require font-awesome
  */
 
 /* GLOBALS */
 @import "font-awesome";
-@import "font-awesome/font-awesome";
 @import "compass";
 @import "fontello";
 @import "globals/bootstrap-and-overrides";
