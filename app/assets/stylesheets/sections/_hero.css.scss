@@ -43,9 +43,6 @@
       width: 80px;
     }
   }
-  h1 {
-    font-size: 36px;
-  }
   .mega {
     font-weight: 900;
     font-size: 58px;
@@ -60,9 +57,13 @@
   .title {
     color: $hero-title-color;
     margin-bottom: 15px;
-
+    font-size: 36px;
+    @include respond-to(tablets-small) {
+      font-size: 28px;
+    }
     @include respond-to(phones) {
       margin-top: 0;
+      font-size: 22px;
     }
   }
   .subtitle {

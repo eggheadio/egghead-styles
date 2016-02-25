@@ -5,6 +5,10 @@ body {
 	font-weight: $body-font-weight;
 	color: $body-font-color;
 	-webkit-font-smoothing: antialiased;
+    &.body-no-scroll {
+      overflow: hidden;
+      position: fixed;
+    }
 	@include respond-to(tablets-large) {
 		font-size: $body-font-size-tablets-large;
 	}
@@ -13,6 +17,7 @@ body {
 	}
 	@include respond-to(phones) {
 		font-size: $body-font-size-phones;
+		padding-top: 50px;
 	}
 }
 

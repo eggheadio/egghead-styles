@@ -3,7 +3,13 @@ header {
   padding: 10px 10px 0px 10px;
   background: $header-bg;
   z-index: 1050;
-  @include respond-to(phones-landscape) {
+  @include respond-to(phones) {
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    min-height: 50px;
+    top: 0;
+    left: 0;
     ul.dropdown-menu > li > a {
       color: $color-dusty-gray;
     }
@@ -28,6 +34,7 @@ header {
   @include respond-to(phones) {
     max-width: 100%;
     width: 100%;
+    margin-left: 0;
   }
 
   .search-component .typeahead-container {
@@ -63,7 +70,8 @@ header {
       max-width: 162px;
     }
     @include respond-to(phones) {
-      height: auto;
+      height: 30px;
+      margin-top: 0;
     }
   }
   .header-navigation-toggle {
