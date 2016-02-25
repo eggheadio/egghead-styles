@@ -30,11 +30,13 @@ For instance, to provide a patch bump and publish, use `./deploy -b patch -p`
 
 `egghead-styles` has the same setup as `egghead-rails` in that `egghead-systems` references both from the same root directory. By default, the Gemfile points to `egghead-styles'` repository and will pull the gem from Github if it cannot find a substitute. This isn't conducive for local development as it would require redeploying the gem for every change.
 
-For local development, we want `bundle` to see live changes to the gem. Tell `bundle` to reference the local repository. Run the following inside the VM's `/app` directory:
+For local development we want rails to see live changes to the egghead-styles app. To do this, change the `@import "egghead-styles"` statement in `application.css.scss` to:
 
-`bundle config local.egghead-styles /egghead-styles`
+`@import "/egghead-styles/app/assets/stylesheets/egghead-styles";`
 
 Vagrant mounts `egghead-styles` to the root of the VM at `/egghead-styles`. Changes to the local copy will now reflect in development. Run `foreman` as usual.
+
+*!IMPORTANT* Do not forget to change this line back after completing your work as it will break production.
 
 #### References
 
