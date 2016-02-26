@@ -38,8 +38,4 @@ Vagrant mounts `egghead-styles` to the root of the VM at `/egghead-styles`. Chan
 
 *!IMPORTANT* Do not forget to change this line back after completing your work as it will break production.
 
-#### References
-
-Source [here](http://bundler.io/v1.3/git.html)
-
 
