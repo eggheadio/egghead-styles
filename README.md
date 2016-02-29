@@ -34,7 +34,7 @@ For local development we want rails to see live changes to the egghead-styles ap
 
 `@import "/egghead-styles/app/assets/stylesheets/egghead-styles";`
 
-Vagrant mounts `egghead-styles` to the root of the VM at `/egghead-styles`. Changes to the local copy will now reflect in development. Run `foreman` as usual.
+Be sure to update to the latest `egghead-systems` and reload the VM. Vagrant will mount `egghead-styles` to the root of the VM at `/egghead-styles`. Changes to the local copy will now reflect in development. Run `foreman start` as usual.
 
 *!IMPORTANT* Do not forget to change this line back after completing your work as it will break production.
 
