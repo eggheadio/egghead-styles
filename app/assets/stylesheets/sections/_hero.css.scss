@@ -1,5 +1,5 @@
 .hero {
-  padding: 10px 0 10px 0;
+  padding: 54px 0 54px 0;
   background: url(image_path("bg/bg-hero.png")) 0 -5px repeat;
   text-align: center;
   color: $hero-subtitle-color;
@@ -7,8 +7,14 @@
     background: url(image_path("bg/bg-hero-angularjs.png")) 0 0 no-repeat;
     background-size: cover;
   }
-  @include respond-to(phones) {
+  @include responsive-for(tablets-landscape) {
+    padding: 40px 0;
+  }
+  @include responsive-for(tablets-portrait) {
     padding: 30px 0;
+  }
+  @include responsive-for(phones-landscape) {
+    padding: 20px 0;
   }
   .hero-logo {
     max-width: 140px;
