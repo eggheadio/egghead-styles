@@ -4,7 +4,8 @@
 /_yardoc/
 /coverage/
 /doc/
-/pkg/
+pkg/*
+!pkg/.gitkeep
 /spec/reports/
 /tmp/
 /node_modules/
