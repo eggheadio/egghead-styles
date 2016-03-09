@@ -1,6 +1,6 @@
 .hero {
   padding: 54px 0 54px 0;
-  background: url(image_path("bg/bg-hero.png")) 0 -5px repeat;
+  background: radial-gradient(75% 50%, #252727 0%, #1B1B19 68%);
   text-align: center;
   color: $hero-subtitle-color;
   &.related-to-angularjs {
