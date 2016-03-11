@@ -106,7 +106,7 @@
 }
 
 // Placeholder text
-@mixin custom-placeholder($color: $input-color-placeholder, $font-size: $input-font-size-placeholder, $line-height: $input-line-height-placeholder) {
+@mixin custom-placeholder($color, $font-size, $line-height) {
     &:-moz-placeholder {
         color: $color;
         font-size: $font-size;
