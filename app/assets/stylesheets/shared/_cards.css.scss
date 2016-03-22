@@ -1,0 +1,11 @@
+.card-base {
+  background: $color-white;
+  border: 1px solid $color-alto;
+  box-shadow: 0 2px 4px $color-alto;
+  padding: 20px;
+  flex-grow: 1;
+  font-size: 15px;
+  color: $color-mako;
+  position: relative;
+  max-width: 450px;
+}
