@@ -21,7 +21,8 @@
 @import "plugins/compass/compass";
 @import "plugins/typeahead-bootstrap";
 @import "plugins/social-likes";
-@import "plugins/font-awesome/font-awesome";
+@import "plugins/font-awesome-old/font-awesome"; // keeping this in here for some of the mixins we use on the site, would like to refactor out
+@import "plugins/font-awesome-sass/font-awesome";
 @import "plugins/chosen";
 @import "plugins/chosen_overrides";
 @import "plugins/flipclock";
