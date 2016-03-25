@@ -98,6 +98,34 @@ h5 {
 	}
 }
 
+.page-title {
+	margin-bottom: 15px;
+	color: $site-color-dark-graphite;
+	font-size: 40px;
+	text-align: center;
+	@include respond-to(tablets-small) {
+		font-size: 30px;
+	}
+	@include respond-to(phones) {
+		font-size: 22px;
+		margin-bottom: 25px;
+	}
+}
+.page-subtitle {
+	color: $site-color-medium-graphite;
+	text-align: center;
+	margin-bottom: 20px;
+	@include respond-to(phones) {
+		margin-bottom: 15px;
+	}
+	a {
+		color: $site-color-medium-graphite;
+		&:hover {
+			color: $site-color-dark-graphite;
+		}
+	}
+}
+
 a {
 	@include transition(150ms);
 	color: $link-color;
