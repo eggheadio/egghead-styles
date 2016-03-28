@@ -98,34 +98,6 @@ h5 {
 	}
 }
 
-.page-title {
-	margin-bottom: 15px;
-	color: $site-color-dark-graphite;
-	font-size: 40px;
-	text-align: center;
-	@include respond-to(tablets-small) {
-		font-size: 30px;
-	}
-	@include respond-to(phones) {
-		font-size: 22px;
-		margin-bottom: 25px;
-	}
-}
-.page-subtitle {
-	color: $site-color-medium-graphite;
-	text-align: center;
-	margin-bottom: 20px;
-	@include respond-to(phones) {
-		margin-bottom: 15px;
-	}
-	a {
-		color: $site-color-medium-graphite;
-		&:hover {
-			color: $site-color-dark-graphite;
-		}
-	}
-}
-
 a {
 	@include transition(150ms);
 	color: $link-color;
@@ -331,6 +303,109 @@ blockquote {
 
 .text-subtle {
   color: $site-color-medium-graphite;
+}
+
+
+// Temporary VWO specific styles
+.vwo-holder {
+	h2 {
+		margin-bottom: 15px;
+		color: $site-color-dark-graphite;
+		font-size: 40px;
+		text-align: center;
+		@include respond-to(tablets-small) {
+			font-size: 30px;
+		}
+		@include respond-to(phones) {
+			font-size: 22px;
+			margin-bottom: 25px;
+		}
+	}
+	h3 {
+		color: $site-color-medium-graphite;
+		text-align: center;
+		margin-bottom: 20px;
+		@include respond-to(phones) {
+			margin-bottom: 15px;
+		}
+		a {
+			color: $site-color-medium-graphite;
+			&:hover {
+				color: $site-color-dark-graphite;
+			}
+		}
+	}
+	ul {
+		padding-left: 75px;
+		line-height: 28px;
+		margin: 30px 0;
+		> li {
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&.list-marked-question {
+			list-style: none;
+			padding-left: 50px;
+			@include respond-to(tablets-small) {
+				padding-left: 30px;
+			}
+			@include respond-to(phones) {
+				padding-left: 20px;
+			}
+			> li {
+				&:before {
+					font-family: 'FontAwesome';
+					margin-right: 10px;
+					font-size: 18px;
+					vertical-align: top;
+					content: "\f059";
+					color: $site-color-red;
+				}
+			}
+		}
+		&.list-marked-ok {
+			list-style: none;
+			padding-left: 50px;
+			@include respond-to(tablets-small) {
+				padding-left: 30px;
+			}
+			@include respond-to(phones) {
+				padding-left: 20px;
+			}
+			> li {
+				&:before {
+					font-family: 'FontAwesome';
+					margin-right: 10px;
+					font-size: 18px;
+					vertical-align: top;
+					content: "\f058";
+					color: $site-color-green;
+				}
+			}
+		}
+		&.list-marked-snowflake {
+			list-style: none;
+			padding-left: 50px;
+			@include respond-to(tablets-small) {
+				padding-left: 30px;
+			}
+			@include respond-to(phones) {
+				padding-left: 20px;
+			}
+			> li {
+				&:before {
+					font-family: 'FontAwesome';
+					margin-right: 10px;
+					font-size: 18px;
+					vertical-align: top;
+					content: url(image_path("elements/snowflake.svg"));
+					color: $site-color-blue-dim;
+				}
+			}
+		}
+	}
 }
 
 
